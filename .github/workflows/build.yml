@@ -23,16 +23,15 @@ jobs:
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
           channel: 'stable'
           cache: true
 
-      - name: Install Dependencies
-        run: flutter pub get --no-pubspec-overrides
+      - name: Get Dependencies with Force
+        run: flutter pub get --offline || flutter pub get --no-pubspec-overrides
         working-directory: ./live_audio_room
 
       - name: Build Release APK
-        run: flutter build apk --release
+        run: flutter build apk --release --no-pub
         working-directory: ./live_audio_room
 
       - name: Upload APK Artifact
@@ -40,3 +39,4 @@ jobs:
         with:
           name: app-release
           path: live_audio_room/build/app/outputs/flutter-apk/app-release.apk
+          
