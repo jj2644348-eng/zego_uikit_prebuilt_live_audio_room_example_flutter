@@ -29,15 +29,18 @@ class LivePageState extends State<LivePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+        return SafeArea(
       child: ZegoUIKitPrebuiltLiveAudioRoom(
-        appID: yourAppID /*input your AppID*/,
-        appSign: yourAppSign /*input your AppSign*/,
-        userID: localUserID,
+        appID: 667119380,
+        appSign: '22f1164d96d5399930ff178454d471f9f1096a63286145ccb119f1701d9c5070',
+        userId: localUserID,
         userName: 'user_$localUserID',
         roomID: widget.roomID,
         events: events,
         config: config,
       ),
+    );
+
     );
   }
 
