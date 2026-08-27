@@ -15,14 +15,13 @@ jobs:
           java-version: '17'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.0'
+          flutter-version: '3.16.0'
           channel: 'stable'
-      - run: flutter pub get
+      - run: flutter pub get --offline
         working-directory: ./live_audio_room
-      - run: flutter build apk --release
+      - run: flutter build apk --release --no-pub
         working-directory: ./live_audio_room
       - uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: live_audio_room/build/app/outputs/flutter-apk/app-release.apk
-          
