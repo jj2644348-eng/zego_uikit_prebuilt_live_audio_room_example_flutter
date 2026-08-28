@@ -27,16 +27,11 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Clean and Get Dependencies
+      - name: Build Release APK Directly
         run: |
           cd live_audio_room
-          rm -f pubspec.lock
-          flutter pub get
+          flutter build apk --release
         shell: bash
-
-      - name: Build Release APK
-        run: flutter build apk --release
-        working-directory: ./live_audio_room
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
