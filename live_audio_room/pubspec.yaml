@@ -1,12 +1,12 @@
 name: live_audio_room
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.2.0+1
 
 environment:
-  sdk: ">=2.16.2 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -24,8 +24,6 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^3.0.0
-  import_sorter: ^4.6.0  # run 'flutter pub run import_sorter:main'
-
 
 flutter:
   uses-material-design: true
@@ -33,3 +31,4 @@ flutter:
   assets:
     - assets/images/
     - assets/avatars/
+    
