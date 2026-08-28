@@ -23,16 +23,14 @@ jobs:
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.2'
+          flutter-version: '3.16.0'
           channel: 'stable'
-          cache: false
+          cache: true
 
-      - name: Force Clean and Build
+      - name: Install and Build
         run: |
           cd live_audio_room
-          rm -f pubspec.lock
-          flutter clean
-          flutter pub get
+          flutter pub get --offline || flutter pub get
           flutter build apk --release
         shell: bash
 
