@@ -12,12 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  zego_uikit: ^2.28.23
-  zego_uikit_prebuilt_live_audio_room: ^3.16.3
+  zego_uikit: ^2.59.5
+  zego_uikit_prebuilt_live_audio_room: ^4.15.5
 
   cupertino_icons: ^1.0.2
   dotted_border: ^2.0.0
-  flutter_screenutil: ">=5.5.3+2 <5.6.1"
+  flutter_screenutil: ^5.9.0
 
 dev_dependencies:
   flutter_test:
